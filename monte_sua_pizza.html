@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Monte Sua Pizza - Pizzaria do Carlão</title>
+   <style>
+      * {
+         margin: 0px;
+         box-sizing: border-box;
+         padding: 0px;
+      }
+
+      body {
+         background-color: rgb(255, 160, 66);
+         font-family: Arial, sans-serif;
+      }
+
+      header {
+         align-items: center;
+         justify-content: space-between;
+         display: flex;
+         padding: 20px;
+         background-color: #333;
+         color: white;
+      }
+
+      h1 {
+         color: blueviolet;
+         padding: 10px;
+      }
+
+      nav {
+         background-color: yellow;
+         padding: 10px;
+         text-align: center;
+         border-radius: 10px;
+      }
+
+      nav a {
+         color: red;
+         text-decoration: none;
+         padding: 0 15px;
+         font-size: 18px;
+      }
+
+      nav a:hover {
+         color: blue;
+      }
+
+      .form-container {
+         padding: 30px;
+         background-color: white;
+         border-radius: 10px;
+         margin: 20px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+         color: #333;
+      }
+
+      .form-container label {
+         display: block;
+         margin: 10px 0;
+         font-weight: bold;
+      }
+
+      .form-container input,
+      .form-container select {
+         width: 100%;
+         padding: 10px;
+         margin: 10px 0;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+      }
+
+      .form-container button {
+         padding: 10px 20px;
+         background-color: blueviolet;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         font-size: 16px;
+         cursor: pointer;
+      }
+
+      .form-container button:hover {
+         background-color: darkviolet;
+      }
+
+      footer {
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: 20px;
+         font-size: 14px;
+         margin-top: 30px;
+      }
+
+      footer strong {
+         color: yellow;
+      }
+
+   </style>
+</head>
+<body>
+
+   <header>
+      <img src="logo.png" alt="Pizzaria do Carlão" width="90px" height="90px">
+      <h1>Pizzaria do Carlão</h1>
+   </header>
+
+   <nav>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="promocoes.html">Promoções</a>
+      <a href="monte_sua_pizza.html">Monte Sua Pizza</a>
+   </nav>
+
+   <div class="form-container">
+      <h2>Monte Sua Pizza</h2>
+
+      <form action="confirmacao.html" method="POST">
+         <label for="tamanho">Escolha o tamanho:</label>
+         <select id="tamanho" name="tamanho">
+            <option value="pequena">Pequena</option>
+            <option value="media">Média</option>
+            <option value="grande">Grande</option>
+         </select>
+
+         <label for="borda">Escolha a borda:</label>
+         <select id="borda" name="borda">
+            <option value="sim">Com borda recheada</option>
+            <option value="nao">Sem borda recheada</option>
+         </select>
+
+         <label for="ingredientes">Escolha os ingredientes:</label>
+         <input type="checkbox" name="ingredientes" value="queijo"> Queijo<br>
+         <input type="checkbox" name="ingredientes" value="presunto"> Presunto<br>
+         <input type="checkbox" name="ingredientes" value="tomate"> Tomate<br>
+         <input type="checkbox" name="ingredientes" value="calabresa"> Calabresa<br>
+         <input type="checkbox" name="ingredientes" value="frango"> Frango<br>
+         <input type="checkbox" name="ingredientes" value="azeitona"> Azeitona<br>
+         <input type="checkbox" name="ingredientes" value="bacon"> Bacon<br>
+
+         <label for="observacoes">Observações adicionais:</label>
+         <textarea id="observacoes" name="observacoes" rows="4" placeholder="Digite suas observações aqui..."></textarea>
+
+         <button type="submit">Enviar Pedido</button>
+      </form>
+   </div>
+
+   <footer>
+      <p>Desenvolvido por: <strong>Kauã S.Oliveira</strong></p>
+      <p>INF251 - Desenvolvimento Web - 2025</p>
+   </footer>
+
+</body>
+</html>
