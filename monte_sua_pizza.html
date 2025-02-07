@@ -6,154 +6,169 @@
    <title>Monte Sua Pizza - Pizzaria do Carlão</title>
    <style>
       * {
-         margin: 0px;
+         margin: 0;
+         padding: 0;
          box-sizing: border-box;
-         padding: 0px;
       }
-
       body {
          background-color: rgb(255, 160, 66);
          font-family: Arial, sans-serif;
       }
-
       header {
-         align-items: center;
-         justify-content: space-between;
          display: flex;
+         justify-content: space-between;
+         align-items: center;
          padding: 20px;
          background-color: #333;
          color: white;
       }
-
       h1 {
          color: blueviolet;
-         padding: 10px;
       }
-
       nav {
          background-color: yellow;
          padding: 10px;
          text-align: center;
          border-radius: 10px;
       }
-
       nav a {
          color: red;
          text-decoration: none;
          padding: 0 15px;
          font-size: 18px;
       }
-
       nav a:hover {
          color: blue;
       }
-
       .form-container {
-         padding: 30px;
+         max-width: 600px;
+         margin: 20px auto;
+         padding: 20px;
          background-color: white;
          border-radius: 10px;
-         margin: 20px;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+         text-align: center;
       }
-
-      h2 {
+      .form-container h2 {
+         text-align: center;
          color: #333;
       }
-
       .form-container label {
          display: block;
          margin: 10px 0;
          font-weight: bold;
+         text-align: left;
       }
-
-      .form-container input,
-      .form-container select {
+      .form-container select, .form-container textarea {
          width: 100%;
          padding: 10px;
-         margin: 10px 0;
+         margin-bottom: 10px;
          border: 1px solid #ccc;
          border-radius: 5px;
+         font-size: 16px;
       }
-
+      .sabores-category {
+         margin-bottom: 20px;
+         text-align: left;
+      }
+      .sabores-category h3 {
+         margin-bottom: 10px;
+         color: #444;
+      }
+      .sabores-category input {
+         margin-right: 5px;
+      }
       .form-container button {
-         padding: 10px 20px;
+         width: 100%;
+         padding: 12px;
          background-color: blueviolet;
          color: white;
          border: none;
          border-radius: 5px;
-         font-size: 16px;
+         font-size: 18px;
          cursor: pointer;
+         transition: 0.3s;
       }
-
       .form-container button:hover {
          background-color: darkviolet;
       }
-
+      .resumo {
+         margin-top: 20px;
+         padding: 15px;
+         background-color: #f8f8f8;
+         border-radius: 5px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         text-align: left;
+      }
+      .resumo h3 {
+         color: #333;
+         margin-bottom: 10px;
+      }
       footer {
-         background-color: #333;
-         color: white;
          text-align: center;
          padding: 20px;
-         font-size: 14px;
-         margin-top: 30px;
+         background-color: #333;
+         color: white;
+         margin-top: 20px;
       }
-
-      footer strong {
-         color: yellow;
-      }
-
    </style>
 </head>
 <body>
-
    <header>
-      <img src="logo.png" alt="Pizzaria do Carlão" width="90px" height="90px">
+      <a href="index.html"><img src="logo.png" alt="Pizzaria do Carlão" width="90" height="90"></a>
       <h1>Pizzaria do Carlão</h1>
    </header>
-
    <nav>
       <a href="cardapio.html">Cardápio</a>
       <a href="promocoes.html">Promoções</a>
       <a href="monte_sua_pizza.html">Monte Sua Pizza</a>
    </nav>
-
    <div class="form-container">
       <h2>Monte Sua Pizza</h2>
-
-      <form action="confirmacao.html" method="POST">
+      <form id="pizzaForm">
          <label for="tamanho">Escolha o tamanho:</label>
-         <select id="tamanho" name="tamanho">
+         <select id="tamanho">
             <option value="pequena">Pequena</option>
             <option value="media">Média</option>
             <option value="grande">Grande</option>
          </select>
-
-         <label for="borda">Escolha a borda:</label>
-         <select id="borda" name="borda">
-            <option value="sim">Com borda recheada</option>
-            <option value="nao">Sem borda recheada</option>
-         </select>
-
-         <label for="ingredientes">Escolha os ingredientes:</label>
-         <input type="checkbox" name="ingredientes" value="queijo"> Queijo<br>
-         <input type="checkbox" name="ingredientes" value="presunto"> Presunto<br>
-         <input type="checkbox" name="ingredientes" value="tomate"> Tomate<br>
-         <input type="checkbox" name="ingredientes" value="calabresa"> Calabresa<br>
-         <input type="checkbox" name="ingredientes" value="frango"> Frango<br>
-         <input type="checkbox" name="ingredientes" value="azeitona"> Azeitona<br>
-         <input type="checkbox" name="ingredientes" value="bacon"> Bacon<br>
-
-         <label for="observacoes">Observações adicionais:</label>
-         <textarea id="observacoes" name="observacoes" rows="4" placeholder="Digite suas observações aqui..."></textarea>
-
-         <button type="submit">Enviar Pedido</button>
+         <div class="sabores-category">
+            <h3>Escolha o sabor:</h3>
+            <div>
+                <label for="quatroqueijos">Quatro Queijos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="portuguesa" value="Portuguesa">
+                <label for="portuguesa">Portuguesa</label>
+            </div>
+            <div>
+                <input type="checkbox" id="frango" value="Frango com Catupiry">
+                <label for="frango">Frango com Catupiry</label>
+            </div>
+            <div>
+                <input type="checkbox" id="calabresa" value="Calabresa">
+                <label for="calabresa">Calabresa</label>
+            </div>
+         </div>
+         <label for="observacoes">Observações:</label>
+         <textarea id="observacoes" rows="3"></textarea>
+         <button type="button" onclick="gerarResumo()">Montar Pizza</button>
       </form>
+      <div class="resumo" id="resumo"></div>
    </div>
-
    <footer>
       <p>Desenvolvido por: <strong>Kauã S.Oliveira</strong></p>
       <p>INF251 - Desenvolvimento Web - 2025</p>
    </footer>
-
+   <script>
+      function gerarResumo() {
+         let tamanho = document.getElementById("tamanho").value;
+         let sabores = [];
+         document.querySelectorAll(".sabores-category input:checked").forEach(el => sabores.push(el.value));
+         let observacoes = document.getElementById("observacoes").value;
+         let resumo = `<h3>Resumo do Pedido</h3><p><strong>Tamanho:</strong> ${tamanho}</p><p><strong>Sabores:</strong> ${sabores.join(", ")}</p><p><strong>Observações:</strong> ${observacoes}</p>`;
+         document.getElementById("resumo").innerHTML = resumo;
+      }
+   </script>
 </body>
 </html>
