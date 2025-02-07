@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Pizzaria do Carlão</title>
+    <style>
+        * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+        body {
+            background-color: rgb(255, 160, 66);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: blueviolet;
+            align-items: center;
+        }
+        .pizza-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .pizza-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        img{
+            width: 30%;
+            height: 30%;
+
+        }
+        #logoo {
+            width: 90px;
+            height: 90px;
+            
+        }
+        footer{
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px;
+         background-color: #333;
+         color: white;
+      }
+    </style>
+</head>
+<body>
+    <header>
+    <img src="logo.png" id="logoo">
+</header>
+
+    <div class="menu">
+        <h1>Cardápio</h1>
+        <div class="pizza-item">
+            <img src="calabresa.jpg" alt="Pizza Calabresa"> 
+            <div class="pizza-item"><strong>Calabresa</strong> - Molho de tomate, queijo e calabresa</div>
+            <img src="4queijos.jpg" alt="Pizza 4 Queijos"> 
+            <div class="pizza-item"><strong>4 Queijos</strong> - Queijo muçarela, provolone, gorgonzola e parmesão </div>
+            <img src="portuguesa.jpg" alt="Pizza Portuguesa"> 
+            <div class="pizza-item"><strong>Portuguesa</strong>- Presunto, queijo, ovos, cebola e azeitonas  </div>
+            <img src="frangocatu.jpg" alt="Pizza frangocatupiry"> 
+            <div class="pizza-item"><strong>Frango com Catupiry</strong> - Frango desfiado e catupiry cremoso </div>
+        </div>
+    </div>
+    <footer>
+        <p>Desenvolvido por: <strong>Kauã S.Oliveira</strong></p>
+        <p>INF251 - Desenvolvimento Web - 2025</p>
+    </footer>
+</body>
+</html>
