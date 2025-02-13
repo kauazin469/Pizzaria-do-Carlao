@@ -6,17 +6,17 @@
     <title>Cardápio - Pizzaria do Carlão</title>
     <style>
         * {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-      }
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             background-color: rgb(255, 160, 66);
             font-family: Arial, sans-serif;
             text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -25,69 +25,168 @@
         }
         h1 {
             color: blueviolet;
-            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .pizza-list {
-            text-align: left;
-            margin-top: 20px;
+        .pizza-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
         }
         .pizza-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .pizza-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .pizza-item h3 {
+            margin: 10px 0;
+        }
+        .price {
+            font-weight: bold;
+            color: red;
+        }
+        .buy-button {
+            background: green;
+            color: white;
             padding: 10px;
-            border-bottom: 1px solid #ccc;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
         }
         footer {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-        img{
-            width: 30%;
-            height: 30%;
-
-        }
-        #logoo {
-            width: 90px;
-            height: 90px;
-            
-        }
-        footer{
             background-color: black;
             padding: 20px;
             text-align: center;
             color: white;
+            margin-top: 20px;
         }
         header {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding: 20px;
-         background-color: #333;
-         color: white;
-      }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        #logoo {
+            width: 90px;
+            height: 90px;
+
+        }
     </style>
 </head>
 <body>
-    <header>
+
+<header>
     <img src="logo.png" id="logoo">
 </header>
 
-    <div class="menu">
-        <h1>Cardápio</h1>
+<div class="container">
+    <h1>Cardápio</h1>
+    <div class="pizza-grid">
         <div class="pizza-item">
-            <img src="calabresa.jpg" alt="Pizza Calabresa"> 
-            <div class="pizza-item"><strong>Calabresa</strong> - Molho de tomate, queijo e calabresa</div>
-            <img src="4queijos.jpg" alt="Pizza 4 Queijos"> 
-            <div class="pizza-item"><strong>4 Queijos</strong> - Queijo muçarela, provolone, gorgonzola e parmesão </div>
-            <img src="portuguesa.jpg" alt="Pizza Portuguesa"> 
-            <div class="pizza-item"><strong>Portuguesa</strong>- Presunto, queijo, ovos, cebola e azeitonas  </div>
-            <img src="frangocatu.jpg" alt="Pizza frangocatupiry"> 
-            <div class="pizza-item"><strong>Frango com Catupiry</strong> - Frango desfiado e catupiry cremoso </div>
+            <img src="calabresa.jpg" alt="Pizza Calabresa">
+            <h3>Calabresa</h3>
+            <p>Molho de tomate, queijo e calabresa</p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+
+        <div class="pizza-item">
+            <img src="4queijos.jpg" alt="Pizza 4 Queijos">
+            <h3>4 Queijos</h3>
+            <p>Mussarela, provolone, gorgonzola e parmesão</p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+
+        <div class="pizza-item">
+            <img src="portuguesa.jpg" alt="Pizza Portuguesa">
+            <h3>Portuguesa</h3>
+            <p>Presunto, queijo, ovos, cebola e azeitonas</p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+
+        <div class="pizza-item">
+            <img src="frangocatu.jpg" alt="Pizza Frango com Catupiry">
+            <h3>Frango com Catupiry</h3>
+            <p>Frango desfiado e catupiry cremoso</p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="pepero.jpg" alt="Pizza Pepperoni ">
+            <h3> Pepperoni </h3>
+            <p> Pepperonis frescos e picantes </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="americana.jpg" alt="Pizza Americana">
+            <h3> Americana </h3>
+            <p> Mussarela, presunto e tomate </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="atum.jpg" alt="Pizza de Atum">
+            <h3> Atum </h3>
+            <p> Atum frescos e sabores </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="bacon.jpg" alt="Pizza de Bacon">
+            <h3> Bacon  </h3>
+            <p> Bacon saborosos  </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="americana.jpg" alt="Pizza Americana">
+            <h3> Americana </h3>
+            <p> Mussarela, presunto e tomate </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="palmito.jpg" alt="Pizza de Palmito">
+            <h3> Palmito </h3>
+            <p> Palmitos frescos e saborosos </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="napolitana.jpg" alt="Pizza Napolitana">
+            <h3> Napolitana </h3>
+            <p> Molho de Tomate,Queijo, Presunto,Ovos fatiados e Calabresa Moída </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="pizza-item">
+            <img src="peito.jpg" alt="Pizza de Peito de Peru">
+            <h3> Peitu de Peru </h3>
+            <p> Peito de Peru, tomates, bacon </p>
+            <p class="price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
         </div>
     </div>
-    <footer>
-        <p>Desenvolvido por: <strong>Kauã S.Oliveira</strong></p>
-        <p>INF251 - Desenvolvimento Web - 2025</p>
-    </footer>
+</div>
+
+<footer>
+    <p>Desenvolvido por: <strong>Kauã S. Oliveira</strong></p>
+    <p>INF251 - Desenvolvimento Web - 2025</p>
+</footer>
+
 </body>
 </html>
