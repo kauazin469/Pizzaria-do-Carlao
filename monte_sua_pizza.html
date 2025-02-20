@@ -68,17 +68,6 @@
          border-radius: 5px;
          font-size: 16px;
       }
-      .sabores-category {
-         margin-bottom: 20px;
-         text-align: left;
-      }
-      .sabores-category h3 {
-         margin-bottom: 10px;
-         color: #444;
-      }
-      .sabores-category input {
-         margin-right: 5px;
-      }
       .form-container button {
          width: 100%;
          padding: 12px;
@@ -133,28 +122,33 @@
             <option value="media">Média</option>
             <option value="grande">Grande</option>
          </select>
-         <div class="sabores-category">
-            <h3>Escolha o sabor:</h3>
-            <div>
-                <label for="quatroqueijos">Quatro Queijos</label>
-                <input type="checkbox" id="quatroqueijos" value="Quatro Queijos">
-            </div>
-            <div>
-               <label for="portuguesa">Portuguesa</label>
-                <input type="checkbox" id="portuguesa" value="Portuguesa">
-                
-            </div>
-            <div>
-               <label for="frango">Frango com Catupiry</label>
-                <input type="checkbox" id="frango" value="Frango com Catupiry">
-              
-            </div>
-            <div>
-               <label for="calabresa">Calabresa</label>
-                <input type="checkbox" id="calabresa" value="Calabresa">
-               
-            </div>
-         </div>
+         <label for="sabor1">Escolha o primeiro sabor:</label>
+         <select id="sabor1">
+            <option value="Quatro Queijos">Quatro Queijos</option>
+            <option value="Portuguesa">Portuguesa</option>
+            <option value="Frango com Catupiry">Frango com Catupiry</option>
+            <option value="Calabresa">Calabresa</option>
+            <option value="Marguerita">Marguerita</option>
+            <option value="Napolitana">Napolitana</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Vegetariana">Vegetariana</option>
+            <option value="Bacon">Bacon</option>
+            <option value="Moda da Casa">Moda da Casa</option>
+         </select>
+         <label for="sabor2">Escolha o segundo sabor (opcional):</label>
+         <select id="sabor2">
+            <option value="">Nenhum</option>
+            <option value="Quatro Queijos">Quatro Queijos</option>
+            <option value="Portuguesa">Portuguesa</option>
+            <option value="Frango com Catupiry">Frango com Catupiry</option>
+            <option value="Calabresa">Calabresa</option>
+            <option value="Marguerita">Marguerita</option>
+            <option value="Napolitana">Napolitana</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Vegetariana">Vegetariana</option>
+            <option value="Bacon">Bacon</option>
+            <option value="Moda da Casa">Moda da Casa</option>
+         </select>
          <label for="observacoes">Observações:</label>
          <textarea id="observacoes" rows="3"></textarea>
          <button type="button" onclick="gerarResumo()">Montar Pizza</button>
@@ -168,10 +162,11 @@
    <script>
       function gerarResumo() {
          let tamanho = document.getElementById("tamanho").value;
-         let sabores = [];
-         document.querySelectorAll(".sabores-category input:checked").forEach(el => sabores.push(el.value));
+         let sabor1 = document.getElementById("sabor1").value;
+         let sabor2 = document.getElementById("sabor2").value;
          let observacoes = document.getElementById("observacoes").value;
-         let resumo = `<h3>Resumo do Pedido</h3><p><strong>Tamanho:</strong> ${tamanho}</p><p><strong>Sabores:</strong> ${sabores.join(", ")}</p><p><strong>Observações:</strong> ${observacoes}</p>`;
+         let saboresEscolhidos = sabor2 ? `${sabor1}, ${sabor2}` : sabor1;
+         let resumo = `<h3>Resumo do Pedido</h3><p><strong>Tamanho:</strong> ${tamanho}</p><p><strong>Sabores:</strong> ${saboresEscolhidos}</p><p><strong>Observações:</strong> ${observacoes}</p>`;
          document.getElementById("resumo").innerHTML = resumo;
       }
    </script>

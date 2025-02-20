@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Pizzaria do Carlão</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #FAEBD7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .payment-option {
+            margin: 10px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        img.qr-code {
+            width: 200px;
+            margin-top: 10px;
+        }
+        button {
+            background: #D2691E;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha a forma de pagamento</h1>
+        <select id="paymentMethod" class="payment-option">
+            <option value="pix">PIX</option>
+            <option value="cartao">Cartão de Crédito</option>
+        </select>
+
+        <div id="pixSection" class="hidden">
+            <h2>Pague com PIX</h2>
+            <img src="qr.png" alt="QR Code para pagamento" class="qr-code">
+            <p>Código PIX: <strong>123456789000XYZ</strong></p>
+            <button onclick="copiarCodigo()">Copiar Código</button>
+        </div>
+
+        <div id="cartaoSection" class="hidden">
+            <h2>Dados do Cartão</h2>
+            <input type="text" placeholder="Número do Cartão" required><br>
+            <input type="text" placeholder="Nome no Cartão" required><br>
+            <input type="text" placeholder="Validade (MM/AA)" required><br>
+            <input type="text" placeholder="CVV" required><br>
+            <button>Finalizar Pagamento</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("paymentMethod").addEventListener("change", function() {
+            document.getElementById("pixSection").classList.add("hidden");
+            document.getElementById("cartaoSection").classList.add("hidden");
+            
+            let selected = this.value;
+            if (selected === "pix") {
+                document.getElementById("pixSection").classList.remove("hidden");
+            } else if (selected === "cartao") {
+                document.getElementById("cartaoSection").classList.remove("hidden");
+            }
+        });
+
+        function copiarCodigo() {
+            navigator.clipboard.writeText("123456789000XYZ");
+            alert("Código PIX copiado!");
+        }
+    </script>
+</body>
+</html>

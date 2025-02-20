@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções - Pizzaria do Carlão</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #FAEBD7;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFF8DC;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .promo-item {
+            background: #FFF5EE;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .promo-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .promo-item h3 {
+            margin: 10px 0;
+        }
+        .price {
+            font-weight: bold;
+            color: #8B0000;
+        }
+        .buy-button {
+            background: #D2691E;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .buy-button:hover {
+            background: #A0522D;
+        }
+        footer {
+            background-color: #8B4513;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Promoções Especiais</h1>
+    </header>
+    <div class="container">
+        <div class="promo-grid">
+            <div class="promo-item">
+                <img src="4queijos.jpg" alt="Promoção 1">
+                <h3>Pizza Família + Refrigerante</h3>
+                <p>Pizza gigante e 2L de refrigerante</p>
+                <p class="price">R$ 79,90</p>
+                <a href="pagamento.html"><button class="buy-button">Aproveitar</button></a>
+            </div>
+            <div class="promo-item">
+                <img src="calabresa.jpg" alt="Promoção 2">
+                <h3>Combo 2 Pizzas</h3>
+                <p>Escolha duas pizzas médias por um preço especial</p>
+                <p class="price">R$ 99,90</p>
+                <a href="pagamento.html"><button class="buy-button">Aproveitar</button></a>
+            </div>
+            <div class="promo-item">
+                <img src="americana.jpg" alt="Promoção 3">
+                <h3>Rodízio em Casa</h3>
+                <p>3 pizzas grandes + borda recheada grátis</p>
+                <p class="price">R$ 129,90</p>
+                <a href="pagamento.html"><button class="buy-button">Aproveitar</button></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Desenvolvido por: <strong>Kauã S. Oliveira</strong></p>
+        <p>INF251 - Desenvolvimento Web - 2025</p>
+    </footer>
+</body>
+</html>
